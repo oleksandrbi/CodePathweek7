@@ -34,7 +34,7 @@ Exploit 2. Unauthenticated Stored Cross Site-Scripting (XSS)
         4. WordPress will truncate the comment allowing the injected content to be posted on the site
             a) A pop up message of "Hello World" will pop up on mouse move
   - [ ] Affected source code:
-    - [Link 1]()https://core.trac.wordpress.org/changeset/32299
+    - [Link 2]()https://core.trac.wordpress.org/changeset/32299
 Exploit 3. Application Denial of Service (DoS)
   - [ ] Summary: 
     - Vulnerability types: 4.2
@@ -43,8 +43,9 @@ Exploit 3. Application Denial of Service (DoS)
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit3.gif
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-Expoint 4: Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
+    - [Link 3](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    
+Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
@@ -57,7 +58,7 @@ Expoint 4: Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
         3. Save your changes, when you go to the post on the site you will see an embeded link
         4. Click the embeded link and a alert window will pop up with the message “No Body Is Safe!”
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 4](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 ## Assets
 
 List any additional assets, such as scripts or files
