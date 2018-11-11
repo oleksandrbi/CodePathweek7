@@ -12,7 +12,7 @@ Exploit 1. Upload Same Origin Method Execution (SOME)
     - Vulnerability types: Same Origin Method Execution (SOME)
     - Tested in version: 4.2
     - Fixed in version: 4.2.8
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit1.gif
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
@@ -21,19 +21,26 @@ Exploit 2. Unauthenticated Stored Cross Site-Scripting (XSS)
     - Vulnerability types: Cross Site-Scripting (XSS)
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit2.gif
   - [ ] Steps to recreate: 
-        1. <a title='x onmouseover=alert(unescape(/hello%20world/.source))
-style=position:absolute;left:0;top:0;width:5000px;height:5000px
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        1. Create a new post
+        2. In the post body, write this code:
+            a) It must contain an XSS injection content, followed by at least 64 kilobytes of text
+                Example: 
+                    <a title='x onmouseover=alert(unescape(/hello%20world/.source))
+                    style=position:absolute;left:0;top:0;width:5000px;height:5000px
+                    AAAAAAAA.. (for 64 kb)....AAAAAA
+        3. Save and reload the site
+        4. WordPress will truncate the comment allowing the injected content to be posted on the site
+            a) A pop up message of "Hello World" will pop up on mouse move
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1]()https://core.trac.wordpress.org/changeset/32299
 Exploit 3. Application Denial of Service (DoS)
   - [ ] Summary: 
     - Vulnerability types: 4.2
     - Tested in version: 4.9.4
     - Fixed in version: unpacthed
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit3.gif
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
