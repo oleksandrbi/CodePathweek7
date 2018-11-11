@@ -14,6 +14,8 @@ Exploit 1. Upload Same Origin Method Execution (SOME)
     - Fixed in version: 4.2.8
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit1.gif
   - [ ] Steps to recreate: 
+        1. Reply to an existing comment
+        2. Using Javascript
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
     
