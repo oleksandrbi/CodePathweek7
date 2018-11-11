@@ -15,7 +15,7 @@ Exploit 1. Upload Same Origin Method Execution (SOME)
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit1.gif
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1]https://core.trac.wordpress.org/browser/tags/version/src/source_file.php
 Exploit 2. Unauthenticated Stored Cross Site-Scripting (XSS)
   - [ ] Summary: 
     - Vulnerability types: Cross Site-Scripting (XSS)
@@ -43,7 +43,7 @@ Exploit 3. Application Denial of Service (DoS)
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit3.gif
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
-    - [Link 3](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 3]https://core.trac.wordpress.org/browser/tags/version/src/source_file.php
     
 Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [ ] Summary: 
