@@ -14,6 +14,7 @@ Exploit 1. CVE-2016-4566 Upload Same Origin Method Execution (SOME)
     - Fixed in version: 4.2.8
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit1.gif
   - [ ] Steps to recreate: 
+  
         1. Reply to an existing comment
         
         2. Using Javascript use the following code:
@@ -37,6 +38,7 @@ Exploit 2. CVE-2015-3440 Unauthenticated Stored Cross Site-Scripting (XSS)
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit2.gif
   - [ ] Steps to recreate: 
+  
         1. Create a new post
         
         2. In the post body, write this code:
@@ -53,8 +55,8 @@ Exploit 2. CVE-2015-3440 Unauthenticated Stored Cross Site-Scripting (XSS)
             
   - [ ] Affected source code:
     - [Link 2](https://core.trac.wordpress.org/changeset/32299)
-    - [Link 2.1] (https://www.exploit-db.com/exploits/36844/)
-    - [Link 2.2] (https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3440)
+    - [Link 2.1](https://www.exploit-db.com/exploits/36844/)
+    - [Link 2.2](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3440)
     
 Exploit 3. CVE-2018-6389 Application Denial of Service (DoS)
   - [ ] Summary: 
@@ -62,12 +64,13 @@ Exploit 3. CVE-2018-6389 Application Denial of Service (DoS)
     - Tested in version: 4.9.4
     - Fixed in version: unpacthed
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit3.gif
-  - [ ] Steps to recreate: 
-        Depending upon the plugins and modules you have installed, the load-scripts.php file selectively calls required JavaScript files by passing their names into the "load" parameter, separated by a comma, like in the following URL:
-        
-        https://your-wordpress-site.com/wp-admin/load-scripts.php?c=1&load=editor,common,user-profile,media-widgets,media-gallery
+  - [ ] Steps to recreate:
   
-        While loading the website, the 'load-scripts.php' (mentioned in the head of the page) tries to find each JavaScript file name given in the URL, append their content into a single file and then send back it to the user's web browser.
+          1. When the site is loading, you need to past the following at the end of the URl
+              load-scripts.php?c=1&load=editor,common,user-profile,media-widgets,media-gallery
+          2. With the script now in the URL, reload the webpage and it tries to find the JavaScript file name (ediotr,common, etc.)
+          3. The webpage will then find all the information and return it to the users webpage in a single file
+        
   - [ ] Affected source code:
     - [Link 3](https://wpvulndb.com/vulnerabilities/9021)
     
@@ -78,11 +81,16 @@ Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouT
     - Fixed in version: 4.7.3
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
+  
         1. Create a new post
+        
         2. In the post body, write this code:
             [embed src='https://youtube.com/embed/12345\x3csvg onload=alert("No Body Is Safe!")\x3e'][/embed]
+            
         3. Save your changes, when you go to the post on the site you will see an embeded link
+        
         4. Click the embeded link and a alert window will pop up with the message “No Body Is Safe!”
+        
   - [ ] Affected source code:
     - [Link 4](https://wpvulndb.com/vulnerabilities/8768) 
     
