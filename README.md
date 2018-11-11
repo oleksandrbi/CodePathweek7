@@ -81,7 +81,7 @@ Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouT
     - Vulnerability types:  Cross-Site Scripting (XSS)
     - Tested in version: 4.2
     - Fixed in version: 4.7.3
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit4.gif
   - [ ] Steps to recreate: 
   
         1. Create a new post
