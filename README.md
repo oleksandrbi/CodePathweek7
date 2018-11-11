@@ -25,9 +25,9 @@ Exploit 1. CVE-2016-4566 Upload Same Origin Method Execution (SOME)
             </script>
         3. The following script will use an exploit that will create a malicious button that when clicked will take the user to a fake    website example.com
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](https://core.trac.wordpress.org/changeset/37382/)
     
-Exploit 2. Unauthenticated Stored Cross Site-Scripting (XSS)
+Exploit 2. CVE-2015-3440 Unauthenticated Stored Cross Site-Scripting (XSS)
   - [ ] Summary: 
     - Vulnerability types: Cross Site-Scripting (XSS)
     - Tested in version: 4.2
@@ -46,16 +46,23 @@ Exploit 2. Unauthenticated Stored Cross Site-Scripting (XSS)
             a) A pop up message of "Hello World" will pop up on mouse move
   - [ ] Affected source code:
     - [Link 2](https://core.trac.wordpress.org/changeset/32299)
+    - [Link 2.1] (https://www.exploit-db.com/exploits/36844/)
+    - [Link 2.2] (https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3440)
     
-Exploit 3. Application Denial of Service (DoS)
+Exploit 3. CVE-2018-6389 Application Denial of Service (DoS)
   - [ ] Summary: 
     - Vulnerability types: 4.2
     - Tested in version: 4.9.4
     - Fixed in version: unpacthed
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit3.gif
   - [ ] Steps to recreate: 
+        Depending upon the plugins and modules you have installed, the load-scripts.php file selectively calls required JavaScript files by passing their names into the "load" parameter, separated by a comma, like in the following URL:
+        
+        https://your-wordpress-site.com/wp-admin/load-scripts.php?c=1&load=editor,common,user-profile,media-widgets,media-gallery
+  
+        While loading the website, the 'load-scripts.php' (mentioned in the head of the page) tries to find each JavaScript file name given in the URL, append their content into a single file and then send back it to the user's web browser.
   - [ ] Affected source code:
-    - [Link 3](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 3](https://wpvulndb.com/vulnerabilities/9021)
     
 Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [ ] Summary: 
@@ -70,7 +77,7 @@ Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouT
         3. Save your changes, when you go to the post on the site you will see an embeded link
         4. Click the embeded link and a alert window will pop up with the message “No Body Is Safe!”
   - [ ] Affected source code:
-    - [Link 4](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 4](https://wpvulndb.com/vulnerabilities/8768)
 ## Assets
 
 List any additional assets, such as scripts or files
