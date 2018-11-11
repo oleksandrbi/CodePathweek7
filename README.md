@@ -66,9 +66,11 @@ Exploit 3. CVE-2018-6389 Application Denial of Service (DoS)
   - [ ] GIF Walkthrough: https://github.com/oleksandrbi/CodePathweek7/blob/master/exploit3.gif
   - [ ] Steps to recreate:
   
-          1. When the site is loading, you need to past the following at the end of the URl
-              load-scripts.php?c=1&load=editor,common,user-profile,media-widgets,media-gallery
+          1. When the site is loading, you need to paste the following at the end of the URL
+              /wp-admin/load-scripts.php?c=1&load=editor,common,user-profile,media-widgets,media-gallery
+              
           2. With the script now in the URL, reload the webpage and it tries to find the JavaScript file name (ediotr,common, etc.)
+          
           3. The webpage will then find all the information and return it to the users webpage in a single file
         
   - [ ] Affected source code:
