@@ -9,8 +9,8 @@ Time spent: 5 hours spent in total
 
 Exploit 1. Upload Same Origin Method Execution (SOME)
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version: 
+    - Vulnerability types: Same Origin Method Execution (SOME)
+    - Tested in version: 4.2
     - Fixed in version: 4.2.8
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
@@ -18,16 +18,17 @@ Exploit 1. Upload Same Origin Method Execution (SOME)
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 Exploit 2. Unauthenticated Stored Cross Site-Scripting (XSS)
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
+    - Vulnerability types: Cross Site-Scripting (XSS)
+    - Tested in version: 4.2
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
+        1. 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 Exploit 3. Application Denial of Service (DoS)
   - [ ] Summary: 
-    - Vulnerability types:
+    - Vulnerability types: 4.2
     - Tested in version: 4.9.4
     - Fixed in version: unpacthed
   - [ ] GIF Walkthrough: 
