@@ -34,25 +34,20 @@ Exploit 3. Application Denial of Service (DoS)
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
+Expoint 4: Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
     - Fixed in version: 
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
+        1. Create a new post
+        2. In the post body, write this code:
+            [embed src='https://youtube.com/embed/12345\x3csvg onload=alert("No Body Is Safe!")\x3e'][/embed]
+        3. Save your changes, when you go to the post on the site you will see an embeded link
+        4. Click the embeded link and a alert window will pop up with the message “No Body Is Safe!”
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
-
 ## Assets
 
 List any additional assets, such as scripts or files
