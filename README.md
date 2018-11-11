@@ -91,7 +91,7 @@ Expoint 4: CVE-2017-6817 Authenticated Stored Cross-Site Scripting (XSS) in YouT
             
         3. Save your changes, when you go to the post on the site you will see an embeded link
         
-        4. Click the embeded link and a alert window will pop up with the message “No Body Is Safe!”
+        4. Click the embeded link and a alert window will pop up with the message “1”
         
   - [ ] Affected source code:
     - [Link 4](https://wpvulndb.com/vulnerabilities/8768) 
